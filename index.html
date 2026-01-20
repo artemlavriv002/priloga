@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розклад занять</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header>
+  <img src="icon-192.png" class="logo">
+  <h1>Розклад занять</h1>
+  <button id="themeBtn">🌙</button>
+</header>
+
+<nav>
+  <button onclick="showDay('mon')">Пн</button>
+  <button onclick="showDay('tue')">Вт</button>
+  <button onclick="showDay('wed')">Ср</button>
+  <button onclick="showDay('thu')">Чт</button>
+  <button onclick="showDay('fri')">Пт</button>
+</nav>
+
+<main id="schedule"></main>
+
+<footer>
+  By. Артём Лавров
+</footer>
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+</body>
+</html>
